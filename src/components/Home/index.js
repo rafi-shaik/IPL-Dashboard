@@ -24,12 +24,6 @@ class Home extends Component {
     this.setState({isLoading: false, teamsList: modifiedData})
   }
 
-  renderLoader = () => {
-    ;<div className="loader-container" testid="loader">
-      <Loader type="Oval" color="#ffffff" height={50} width={50} />
-    </div>
-  }
-
   renderTeamsList = () => {
     const {teamsList} = this.state
     return (
@@ -40,6 +34,12 @@ class Home extends Component {
       </ul>
     )
   }
+
+  renderLoader = () => (
+    <div testid="loader" className="loader-container">
+      <Loader type="Oval" color="#ffffff" height={50} width={50} />
+    </div>
+  )
 
   render() {
     const {isLoading} = this.state
