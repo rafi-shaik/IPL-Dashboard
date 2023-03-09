@@ -65,37 +65,10 @@ class TeamMatches extends Component {
     return (
       <div className="responsive-container">
         <img src={teamBannerUrl} alt="team banner" className="banner-image" />
-        <LatestMatch key={latestMatchDetails.id} details={latestMatchDetails} />
+        <LatestMatch details={latestMatchDetails} />
         {this.renderRecentMatches()}
       </div>
     )
-  }
-
-  getRouteClassName = () => {
-    const {match} = this.props
-    const {params} = match
-    const {id} = params
-
-    switch (id) {
-      case 'RCB':
-        return 'rcb'
-      case 'KKR':
-        return 'kkr'
-      case 'KXP':
-        return 'kxp'
-      case 'CSK':
-        return 'csk'
-      case 'RR':
-        return 'rr'
-      case 'MI':
-        return 'mi'
-      case 'SH':
-        return 'srh'
-      case 'DC':
-        return 'dc'
-      default:
-        return ''
-    }
   }
 
   renderLoader = () => (
@@ -106,7 +79,6 @@ class TeamMatches extends Component {
 
   render() {
     const {isLoading} = this.state
-    const className = `team-matches-container ${this.getRouteClassName()}`
 
     return (
       <div className="bg-container">
