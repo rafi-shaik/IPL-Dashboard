@@ -9,7 +9,7 @@ const MatchCard = props => {
   const resultClassName = matchStatus === 'Won' ? 'heading-won' : 'heading-lost'
 
   return (
-    <div className="match-card">
+    <li className="match-card">
       <img
         src={competingTeamLogo}
         alt={`competing team ${competingTeam}`}
@@ -18,7 +18,7 @@ const MatchCard = props => {
       <p className="team-name">{competingTeam}</p>
       <p className="para">{result}</p>
       <p className={resultClassName}>{matchStatus}</p>
-    </div>
+    </li>
   )
 }
 

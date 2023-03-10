@@ -24,7 +24,7 @@ class TeamMatches extends Component {
     competingTeam: obj.competing_team,
     competingTeamLogo: obj.competing_team_logo,
     firstInnings: obj.first_innings,
-    secondsInnings: obj.second_innings,
+    secondInnings: obj.second_innings,
     matchStatus: obj.match_status,
   })
 
